@@ -4,9 +4,11 @@ import {
   GeocodeResult,
   GeocodingAddressComponentType
 } from '@googlemaps/google-maps-services-js';
+
+import config from '../../../config';
 import { IAddress } from '../../models/address';
 
-const GOOGLE_MAPS_KEY = process.env.GOOGLE_MAPS_KEY;
+const GOOGLE_MAPS_KEY = config.GOOGLE_MAPS_KEY;
 
 const googlemapsClient = new Client({});
 

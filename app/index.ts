@@ -1,11 +1,10 @@
 import { json } from 'body-parser';
-import { config } from 'dotenv';
 import * as express from 'express';
+
+import config from './config';
 import { controller as geolocationController } from './controllers/geo-location';
 
-config();
-
-const PORT = (process.env.PORT && parseInt(process.env.PORT)) || 9000;
+const PORT = (config.PORT);
 
 export const app = express();
 
