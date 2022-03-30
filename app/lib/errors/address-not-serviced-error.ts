@@ -1,11 +1,11 @@
 import ErrorBase from './base-error'
 
-export class AddressNotFoundError extends ErrorBase {
+export class AddressNotServicedError extends ErrorBase {
   constructor(address: string) {
     super(`Address ${address} not found`);
   }
 
-  code = 'ADDRESS_NOT_FOUND';
+  code = 'ADDRESS_NOT_SERVICED';
   statusCode = 404;
-  message = 'Non-existing address';
+  message = 'Non-serviced address';
 }

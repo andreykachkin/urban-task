@@ -2,7 +2,7 @@ import { FeatureCollection, Polygon, Position, Feature } from 'geojson';
 import pointInPolygon from '@turf/boolean-point-in-polygon';
 import { getGeoJson } from '../orm/service-areas';
 
-export function findServiceArea(lat: number, lng: number) {
+export function findServiceArea(lat: number, lng: number): string | null {
   const { features } = getGeoJson() as FeatureCollection;
   
   const district: Feature = features

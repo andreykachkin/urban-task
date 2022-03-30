@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev app/index.ts",
     "start": "node app/index.ts",
-    "test": "mocha 'tests/**/*.spec.js' --exit",
+    "test": "mocha -r ts-node/register 'tests/**/*.spec.ts' --exit",
     "build": "tsc",
     "prebuild": "del 'app/**/*.{js,map}' 'tests/**/*.{js,map}'"
   },
