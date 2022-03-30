@@ -1,6 +1,6 @@
-import { config } from 'dotenv';
+import { config } from 'dotenv'
 
-config();
+config()
 
 export default {
   NODE_ENV: process.env.NODE_ENV || 'development',
@@ -10,4 +10,7 @@ export default {
   MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN,
   MAPBOX_LIMIT: process.env.MAPBOX_LIMIT || 1,
   MAPBOX_COUNTRIES: process.env.MAPBOX_COUNTRIES || 'gb',
+
+  GOOGLE_PROVIDER_PRIORITY: process.env.GOOGLE_PROVIDER_PRIORITY,
+  MAPBOX_PROVIDER_PRIORITY: process.env.MAPBOX_PROVIDER_PRIORITY,
 }

@@ -1,7 +1,4 @@
-import { AddressNotServicedError } from './address-not-serviced-error';
-import { AddressNotFoundError } from './address-not-found-error';
+import { AddressNotServicedError } from './address-not-serviced-error'
+import { AddressNotFoundError } from './address-not-found-error'
 
-export {
-  AddressNotFoundError,
-  AddressNotServicedError
-}
+export { AddressNotFoundError, AddressNotServicedError }

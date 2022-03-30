@@ -1,17 +1,18 @@
-import { json } from 'body-parser';
-import * as express from 'express';
+import { json } from 'body-parser'
+import * as express from 'express'
 
-import config from './config';
-import { controller as geolocationController } from './controllers/geo-location';
+import config from './config'
+import { controller as geolocationController } from './controllers/geo-location'
 
-const PORT = (config.PORT);
+const { PORT, NODE_ENV } = config
 
-export const app = express();
+export const app = express()
 
-app.use(json());
+app.use(json())
 
-geolocationController(app);
+geolocationController(app)
 
 app.listen(PORT, () => {
-  console.log(`Listening on ${PORT}`);
-});
+  console.log(`Start app on ${NODE_ENV} stage`)
+  console.log(`App listening on port ${PORT}!`)
+})
