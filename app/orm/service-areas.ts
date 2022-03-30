@@ -1,7 +1,8 @@
+import { readFileSync } from 'fs';
 import { GeoJSON } from 'geojson';
 
-const json = require('./formatted-data.json');
-
 export function getGeoJson() {
-  return json as GeoJSON;
+  const data = readFileSync(__dirname + '/formatted-data.json');
+  
+  return JSON.parse(data.toString()) as GeoJSON;
 }

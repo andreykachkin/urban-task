@@ -1,4 +1,4 @@
-import { Point, Feature } from 'geojson';
+import { Feature } from 'geojson';
 
 export interface IAddress {
   address1: string;
