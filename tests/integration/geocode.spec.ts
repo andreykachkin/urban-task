@@ -2,11 +2,11 @@ import { expect } from 'chai';
 import * as sinon from 'sinon';
 import * as request from 'supertest';
 import { app } from '../../app';
-import * as GoogleMapsProvider from '../../app/lib/coordinates/providers/googlemaps-provider';
+import * as GeocodeProvider from '../../app/lib/coordinates/providers';
 
 describe('geo-location', () => {
   beforeEach(() => {
-    sinon.stub(GoogleMapsProvider, 'googleMapsGeocode').resolves({
+    sinon.stub(GeocodeProvider, 'geocode').resolves({
       lat: 51.547133,
       lng: -0.005668,
       address1: 'testing address1',

@@ -7,7 +7,7 @@ const { GOOGLE_MAPS_KEY } = config
 
 const googlemapsClient = new Client({})
 
-function mapAddress(googleAddress: GeocodeResult) {
+export function mapAddress(googleAddress: Partial<GeocodeResult>) {
   return {
     address1: googleAddress.address_components.find((x) => x.types.includes(AddressType.route))?.long_name,
     address2: googleAddress.address_components.find((x) => x.types.includes(AddressType.neighborhood))?.long_name,

@@ -6,7 +6,7 @@ import { IAddress, IMapboxResult } from '../../models/address'
 
 const { MAPBOX_LIMIT, MAPBOX_ACCESS_TOKEN, MAPBOX_COUNTRIES, MAPBOX_URL } = config
 
-function mapMapboxAddress(mapboxAddress: IMapboxResult) {
+export function mapMapboxAddress(mapboxAddress: IMapboxResult) {
   return {
     address1: mapboxAddress.place_name,
     address2: mapboxAddress.properties.address,
