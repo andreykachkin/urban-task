@@ -3,7 +3,8 @@
     "target": "es6",
     "module": "commonjs",
     "sourceMap": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "outDir": "dist"
   },
   "compileOnSave": true,
   "include": ["app/**/*.ts", "tests/**/*.ts"],

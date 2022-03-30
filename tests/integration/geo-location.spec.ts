@@ -6,7 +6,7 @@ import * as GoogleMapsProvider from '../../app/lib/coordinates/providers/googlem
 
 describe('geo-location', () => {
   beforeEach(() => {
-    sinon.stub(GoogleMapsProvider, 'geocode').resolves({
+    sinon.stub(GoogleMapsProvider, 'googleMapsGeocode').resolves({
       lat: 51.547133,
       lng: -0.005668,
       address1: 'testing address1',
