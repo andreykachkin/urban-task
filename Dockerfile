@@ -1,20 +1,20 @@
 FROM node:17-alpine
 
 # Create directory
-WORKDIR /usr/src/app
+WORKDIR /usr/application/
 
-COPY ./package.json ./package.json
+COPY ./package.json .
 
 # Install all the dependencies
 RUN npm i
 
 # Copy the source code and config
-COPY ./app ./app
-COPY ./tsconfig.json ./tsconfig.json
+COPY ./app ./app/
+COPY ./tsconfig.json .
 
 # Build
 RUN npm run build
 
-EXPOSE 8080
+EXPOSE 9000
 
 CMD ["npm", "run", "start"]
