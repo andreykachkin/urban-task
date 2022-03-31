@@ -10,10 +10,12 @@ RUN npm i
 
 # Copy the source code and config
 COPY ./app ./app/
+COPY ./static ./static
 COPY ./tsconfig.json .
 
 # Build
 RUN npm run build
+
 
 EXPOSE 9000
 
