@@ -28,7 +28,7 @@ npm run dev # For development
 ## Tests
 
 ```bash
-npm run tests
+npm run test
 ```
 
 ## Run in Docker container
