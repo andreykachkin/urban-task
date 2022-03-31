@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { IMapboxResult } from '../../app/lib/models/address';
-import { mapMapboxAddress } from '../../app/lib/coordinates/providers/mapbox-provider';
+import { Address } from '../../app/lib/models/address'
 
 const mapboxTestAddress: IMapboxResult = {
   id: 'place.10094022391318790',
@@ -30,7 +30,7 @@ const mapboxTestAddress: IMapboxResult = {
 
 describe('lib/coordinates/provider/mapbox-provider', () => {
   it('should convert mapbox response',  () => {
-    const address = mapMapboxAddress(mapboxTestAddress);
+    const address = Address.mapMapboxAddress(mapboxTestAddress);
     expect(address).to.deep.eq({
       address1: 'Addlestone, Surrey, England, United Kingdom',
       address2: 'test_address',

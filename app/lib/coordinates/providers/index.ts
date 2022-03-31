@@ -1,11 +1,11 @@
-import { IAddress, IGeocodeProvider } from '../../models/address'
+import { Address, IGeocodeProvider } from '../../models/address'
 import { mapboxGeocode } from './mapbox-provider'
 import { googleMapsGeocode } from './googlemaps-provider'
 import config from '../../../config'
 
 const { GOOGLE_PROVIDER_PRIORITY, MAPBOX_PROVIDER_PRIORITY } = config
 
-export async function geocode(address: string): Promise<IAddress> {
+export async function geocode(address: string): Promise<Address> {
   const providers: IGeocodeProvider[] = [
     {
       geocode: googleMapsGeocode,

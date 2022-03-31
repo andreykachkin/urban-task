@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { GeoJSON } from 'geojson';
 import * as sinon from 'sinon';
 import { findServiceArea } from '../../app/lib/service-areas';
-import * as orm from '../../app/orm/service-areas';
+import * as orm from '../../app/services/service-areas';
 
 const geojson: GeoJSON[] = [
   {

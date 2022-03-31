@@ -6,6 +6,6 @@ export class AddressNotServicedError extends ErrorBase {
   }
 
   code = 'ADDRESS_NOT_SERVICED'
-  statusCode = 404
+  statusCode = 400
   message = 'Non-serviced address'
 }

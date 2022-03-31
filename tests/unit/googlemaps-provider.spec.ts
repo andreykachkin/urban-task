@@ -5,7 +5,7 @@ import {
   AddressType,
   GeocodingAddressComponentType
 } from "@googlemaps/google-maps-services-js";
-import { mapAddress } from '../../app/lib/coordinates/providers/googlemaps-provider';
+import { Address } from '../../app/lib/models/address'
 
 const googleMapsTestAddress: Partial<GeocodeResult> = {
   address_components: [
@@ -37,13 +37,14 @@ const googleMapsTestAddress: Partial<GeocodeResult> = {
 
 describe('lib/coordinates/provider/googlemaps-provider', () => {
   it('should convert googleMaps response',  () => {
-    const address = mapAddress(googleMapsTestAddress);
+    const address = Address.mapGoogleAddress(googleMapsTestAddress);
     expect(address).to.deep.eq({
       address1: 'White Bear Yard',
       address2: 'London',
       city: 'Greater London',
       lat: 51.5222691,
       lng: -0.1098115,
+      postcode: undefined
     });
   });
 });
